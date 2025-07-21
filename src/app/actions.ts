@@ -2,7 +2,7 @@
 "use server";
 
 import { improveProfile, ImproveProfileInput, ImproveProfileOutput } from "@/ai/flows/profile-improvement-tool";
-import { createPost as createPostInDb, updateUserProfile, getConversationsForUser, getMessagesForConversation, sendMessage as sendMessageToDb, markConversationAsRead, getOrCreateConversation as getOrCreateConversationInDb } from "@/lib/firebase/firestore";
+import { createPost as createPostInDb, updateUserProfile, getConversationsForUser, getMessagesForConversation, sendMessage as sendMessageToDb, markConversationAsRead, getOrCreateConversation as getOrCreateConversationInDb, getPosts as getPostsFromDb, PostWithAuthor } from "@/lib/firebase/firestore";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 
@@ -187,5 +187,15 @@ export async function getOrCreateConversation(currentUserId: string, otherUserId
     } catch (error) {
         console.error("Error getting or creating conversation:", error);
         throw new Error("Failed to get or create conversation.");
+    }
+}
+
+export async function getPostsAction(): Promise<PostWithAuthor[]> {
+    try {
+        const posts = await getPostsFromDb();
+        return posts;
+    } catch (error) {
+        console.error("Error fetching posts:", error);
+        return [];
     }
 }

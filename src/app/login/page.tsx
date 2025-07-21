@@ -71,9 +71,6 @@ export default function LoginPage() {
         if (isSignInLink(window.location.href)) {
             let email = window.localStorage.getItem('emailForSignIn');
             if (!email) {
-                // User opened the link on a different device. To prevent session fixation
-                // attacks, ask the user to provide the email again. For simplicity,
-                // we'll just ask them to restart the sign-in flow.
                 toast({
                     variant: "destructive",
                     title: "Sign In Failed",
@@ -101,7 +98,7 @@ export default function LoginPage() {
       title: "Success",
       description: "You have been logged in.",
     })
-    router.push("/")
+    router.push("/feed")
   }
 
   const handleError = (error: Error) => {

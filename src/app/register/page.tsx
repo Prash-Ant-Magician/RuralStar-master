@@ -71,7 +71,7 @@ export default function RegisterPage() {
         title: "Account Created",
         description: "You have been successfully registered and logged in.",
     });
-    router.push("/")
+    router.push("/feed")
   }
 
   const handleError = (error: Error) => {

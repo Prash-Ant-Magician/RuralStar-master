@@ -81,7 +81,7 @@ export function AppHeader() {
     <header className="sticky top-0 z-50 w-full border-b bg-card">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 md:px-8">
         <div className="flex items-center gap-4">
-            <Link href="/" className="group flex items-center gap-2">
+            <Link href={user ? "/feed" : "/"} className="group flex items-center gap-2">
                 <Logo />
                 <h1 className="text-xl font-bold text-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:opacity-100">
                 RuralStar
@@ -106,7 +106,7 @@ export function AppHeader() {
           {loading ? null : user ? (
             <>
               <nav className="hidden items-center gap-2 md:flex">
-                  <Button variant={pathname === '/' ? 'secondary' : 'ghost'} size="icon" onClick={() => router.push('/')}>
+                  <Button variant={pathname === '/feed' ? 'secondary' : 'ghost'} size="icon" onClick={() => router.push('/feed')}>
                       <Home className="h-5 w-5"/>
                       <span className="sr-only">Home</span>
                   </Button>
