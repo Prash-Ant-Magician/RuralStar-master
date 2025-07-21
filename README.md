@@ -29,8 +29,8 @@ RuralStar is a modern web application designed to empower rural communities by p
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/RuralStar.git
-   cd RuralStar
+   git clone https://github.com/Prash-Ant-Magician/RuralStar-master.git
+   cd RuralStar-master
    ```
 2. Install dependencies:
    ```sh
