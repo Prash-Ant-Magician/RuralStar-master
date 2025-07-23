@@ -116,13 +116,13 @@ export default function RegisterPage() {
          <div className="flex justify-center mb-6">
             <Link href="/" className="flex items-center gap-2">
                 <Logo className="h-10 w-10 text-primary" />
-                <h1 className="text-2xl font-bold text-foreground">RuralStar</h1>
+                <h1 className="text-2xl font-bold text-foreground">TalentTrack</h1>
             </Link>
         </div>
         <Card>
           <CardHeader className="text-center">
             <CardTitle>Create an Account</CardTitle>
-            <CardDescription>Join RuralStar and showcase your talent.</CardDescription>
+            <CardDescription>Join TalentTrack and showcase your talent.</CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>

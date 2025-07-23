@@ -161,7 +161,7 @@ export default function LoginPage() {
             <div className="flex justify-center mb-6">
                  <Link href="/" className="flex items-center gap-2">
                     <Logo className="h-10 w-10 text-primary" />
-                    <h1 className="text-2xl font-bold text-foreground">RuralStar</h1>
+                    <h1 className="text-2xl font-bold text-foreground">TalentTrack</h1>
                 </Link>
             </div>
             <Card>
@@ -192,7 +192,7 @@ export default function LoginPage() {
         <div className="flex justify-center mb-6">
             <Link href="/" className="flex items-center gap-2">
                 <Logo className="h-10 w-10 text-primary" />
-                <h1 className="text-2xl font-bold text-foreground">RuralStar</h1>
+                <h1 className="text-2xl font-bold text-foreground">TalentTrack</h1>
             </Link>
         </div>
         <Card>

@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useState, useRef } from "react"
@@ -142,7 +141,7 @@ export function CreatePost() {
                     {mediaPreview ? "Change Media" : "Upload Media"}
                 </Button>
 
-                <Button type="submit" className="w-full" variant="accent" disabled={isLoading}>
+                <Button type="submit" className="w-full" variant="default" disabled={isLoading}>
                     {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                     Post
                 </Button>

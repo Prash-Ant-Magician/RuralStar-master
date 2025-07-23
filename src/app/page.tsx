@@ -60,7 +60,7 @@ export default function LandingPage() {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex items-center gap-2">
                         <Logo className="h-10 w-10" />
-                        <span className="text-2xl font-bold text-foreground">RuralStar</span>
+                        <span className="text-2xl font-bold text-foreground">TalentTrack</span>
                     </Link>
                     <div className="flex items-center gap-2">
                         <Button variant="ghost" asChild><Link href="/register">Join now</Link></Button>
@@ -75,7 +75,7 @@ export default function LandingPage() {
                             Showcase your talent. <span className="text-primary">Connect with opportunity.</span>
                         </h1>
                         <p className="mt-6 text-lg text-muted-foreground">
-                            The premier platform for rural athletes to get discovered by scouts, coaches, and sponsors from around the globe.
+                            The premier platform for athletes to get discovered by scouts, coaches, and sponsors from around the globe.
                         </p>
                         <div className="mt-8 flex flex-col items-center space-y-4 md:items-start">
                              <Button size="lg" className="w-full max-w-sm" onClick={handleGoogleSignIn} disabled={isGoogleLoading}>
@@ -87,16 +87,15 @@ export default function LandingPage() {
                             </Button>
                         </div>
                         <p className="mt-6 text-sm">
-                            New to RuralStar? <Link href="/register" className="font-semibold text-primary hover:underline">Join now</Link>
+                            New to TalentTrack? <Link href="/register" className="font-semibold text-primary hover:underline">Join now</Link>
                         </p>
                     </div>
                      <div className="mt-8 md:mt-0">
                         <Image
-                            src=""//image to be added for front page
+                            src="/landingimage.png"
                             width={800}
                             height={600}
                             alt="Athlete looking at a laptop"
-                            data-ai-hint="athlete laptop"
                             className="rounded-2xl shadow-2xl"
                         />
                     </div>

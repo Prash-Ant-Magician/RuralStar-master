@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -84,7 +83,7 @@ export function AppHeader() {
             <Link href={user ? "/feed" : "/"} className="group flex items-center gap-2">
                 <Logo />
                 <h1 className="text-xl font-bold text-foreground opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:opacity-100">
-                RuralStar
+                TalentTrack
                 </h1>
             </Link>
         </div>
