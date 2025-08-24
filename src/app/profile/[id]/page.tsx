@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import { AppHeader } from "@/components/app-header";
 import { ProfileHeader } from "@/components/profile/profile-header";
 import { AboutCard } from "@/components/profile/about-card";
@@ -66,7 +67,9 @@ function ProfileSkeleton() {
     )
 }
 
-export default function AthleteProfilePage({ params: { id } }: { params: { id: string } }) {
+export default function AthleteProfilePage() {
+  const params = useParams();
+  const id = params.id as string;
   const { user: authUser, loading: authLoading } = useAuth();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [posts, setPosts] = useState<PostWithAuthor[]>([]);
